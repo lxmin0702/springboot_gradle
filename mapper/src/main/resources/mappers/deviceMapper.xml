@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.blt.mapper.DeviceMapper">
+<!--    <resultMap id="DeviceResultMap" type="com.blt.entity.Device">-->
+<!--        <id column="id" jdbcType="VARCHAR" property="id" />-->
+<!--        <result column="dev_name" jdbcType="VARCHAR" property="deviceName" />-->
+<!--        <result column="dev_description" jdbcType="VARCHAR" property="deviceName" />-->
+<!--        <result column="running_status" jdbcType="TINYINT" property="runningStatus" />-->
+<!--        <result column="connect_status" jdbcType="TINYINT" property="connectStatus" />-->
+<!--        <result column="connect_time" jdbcType="DATE" property="connectTime" />-->
+<!--        <result column="dev_ip" jdbcType="VARCHAR" property="deviceIp" />-->
+<!--        <result column="dev_sn" jdbcType="VARCHAR" property="deviceSn" />-->
+<!--    </resultMap>-->
+
+    <!-- 查询设备数据 -->
+    <select id="findAll" resultType="com.blt.entity.Device" >
+		select * from device
+	</select>
+
+    <!-- 根据id查询单个设备 -->
+    <select id="findById" resultType="com.blt.entity.Device" >
+		select * from device where id = #{id}
+	</select>
+</mapper>
